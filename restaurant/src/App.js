@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
 
-function App() {
+
+import NavProvider from './context/NavContext';
+import './App.scss';
+import './base/style.scss';
+
+import Header from './pages/Js/Header';
+import Navigation from './components/Js/Navigation';
+import Slides from './components/Js/Slides';
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavProvider >
+        <header>
+          <Header />
+        </header>
+        <nav>
+          <Navigation />
+        </nav>
+        <main>
+          <Slides />
+        </main>
+        <footer>
+        </footer>
+      </NavProvider>
     </div>
   );
 }
