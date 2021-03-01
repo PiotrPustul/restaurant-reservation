@@ -4,11 +4,22 @@
 
   .carousel-slider {
     width: 100vw;
-    // height: 100vh;
+    @media (min-width: 1200px) {
+      height: 100vh;
+    }
   }
 
   .thumbs-wrapper,
   .carousel-status {
     display: none;
+  }
+
+  @keyframes expand {
+    0% {
+      transform: translateX(1400px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
   }
 }

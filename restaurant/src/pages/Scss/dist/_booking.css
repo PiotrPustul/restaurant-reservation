@@ -1,0 +1,278 @@
+.booking {
+  width: 100vw;
+  height: 100%;
+  background-color: whitesmoke;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 992px) {
+  .booking {
+    height: 100%;
+    position: fixed;
+    flex-direction: row;
+  }
+}
+.booking .booking__aside {
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid gray;
+}
+@media (min-width: 992px) {
+  .booking .booking__aside {
+    width: 30%;
+    height: 100%;
+    position: relative;
+  }
+}
+.booking .booking__aside .aside__reservation {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 992px) {
+  .booking .booking__aside .aside__reservation {
+    display: flex;
+    justify-content: unset;
+  }
+}
+.booking .booking__aside .aside__reservation .reservation-heading {
+  background-color: lightgray;
+  border-bottom: 1px solid gray;
+  font-size: 2.4rem;
+  padding: 2.4rem 1.6rem 1.6rem;
+}
+@media (min-width: 992px) {
+  .booking .booking__aside .aside__reservation .reservation-heading {
+    background-color: lightgray;
+    border-bottom: 1px solid gray;
+    font-size: 2.4rem;
+    padding: 2.4rem 1.6rem 0.8rem;
+  }
+}
+.booking .booking__aside .aside__reservation .reservation__form {
+  display: flex;
+  flex-direction: column;
+}
+.booking .booking__aside .aside__reservation .reservation__form .form-input__container {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid gray;
+  font-size: 1.6rem;
+  padding: 2.4rem 1.6rem 1.6rem;
+  display: flex;
+  align-items: flex-end;
+}
+.booking .booking__aside .aside__reservation .reservation__form .form-input__container .form-input__label {
+  width: 25%;
+  height: 100%;
+  color: #6e6e6e;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 1280px) {
+  .booking .booking__aside .aside__reservation .reservation__form .form-input__container .form-input__label {
+    width: 20%;
+  }
+}
+.booking .booking__aside .aside__reservation .reservation__form .form-input__container input {
+  width: 75%;
+  height: 30px;
+  background-color: lightgray;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  font-style: italic;
+  outline: none;
+}
+@media (min-width: 1280px) {
+  .booking .booking__aside .aside__reservation .reservation__form .form-input__container input {
+    width: 80%;
+  }
+}
+.booking .booking__aside .aside__reservation .reservation__form .form-input__container input[type=number]::-webkit-inner-spin-button,
+.booking .booking__aside .aside__reservation .reservation__form .form-input__container input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.booking .booking__aside .aside__reservation .reservation__form .form-details__container {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid gray;
+  padding: 2.4rem 1.6rem 2.4rem;
+  display: flex;
+  justify-content: space-between;
+}
+.booking .booking__aside .aside__reservation .reservation__form .form-details__container .form-details__label {
+  width: 25%;
+  color: #6e6e6e;
+  font-size: 1.4rem;
+}
+@media (min-width: 1280px) {
+  .booking .booking__aside .aside__reservation .reservation__form .form-details__container .form-details__label {
+    width: 20%;
+  }
+}
+.booking .booking__aside .aside__reservation .reservation__form .form-details__container .form-details__info {
+  width: 50%;
+}
+@media (min-width: 1280px) {
+  .booking .booking__aside .aside__reservation .reservation__form .form-details__container .form-details__info {
+    width: 55%;
+  }
+}
+.booking .booking__aside .aside__reservation .reservation__form .form-details__container .form-details__option {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+}
+.booking .booking__aside .aside__reservation .reservation__form .form-details__container .form-details__option .fa-arrow-down,
+.booking .booking__aside .aside__reservation .reservation__form .form-details__container .form-details__option .fa-arrow-up,
+.booking .booking__aside .aside__reservation .reservation__form .form-details__container .form-details__option .fa-plus-circle,
+.booking .booking__aside .aside__reservation .reservation__form .form-details__container .form-details__option .fa-minus-circle {
+  color: green;
+  cursor: pointer;
+  font-size: 1.8rem;
+  margin-left: 2rem;
+}
+.booking .booking__aside .aside__reservation .reservation__form .form-details__container .form-details__option .disabled {
+  color: gray;
+}
+.booking .booking__aside .aside__reservation .reservation__form .form-details__container .form-details__tabel {
+  width: 75%;
+}
+@media (min-width: 1280px) {
+  .booking .booking__aside .aside__reservation .reservation__form .form-details__container .form-details__tabel {
+    width: 80%;
+  }
+}
+.booking .booking__aside .aside__reservation .reservation__form .form__calendar {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  padding: 1.2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.booking .booking__aside .aside__reservation .reservation__form .form__calendar .react-calendar {
+  transition: all ease-in-out 250ms;
+}
+.booking .booking__main {
+  width: 100%;
+  height: 80vh;
+  background-color: #f9f9fb;
+  border-bottom: 1px solid gray;
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 992px) {
+  .booking .booking__main {
+    width: 70%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+.booking .booking__main .main-restaurant {
+  width: 33%;
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .booking .booking__main .main-restaurant {
+    width: 100%;
+    height: 33%;
+    padding-top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+.booking .booking__submit {
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid gray;
+  padding: 2.4rem 0;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 992px) {
+  .booking .booking__submit {
+    width: 100px;
+    background-color: transparent;
+    border-bottom: none;
+    position: absolute;
+    margin: auto;
+    left: 100px;
+    bottom: 50px;
+  }
+}
+.booking .booking__submit .submit-text {
+  margin-right: 0.5rem;
+}
+.booking .table-square {
+  width: 70px;
+  height: 70px;
+  border: 2px solid black;
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 576px) {
+  .booking .table-square {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media (min-width: 992px) {
+  .booking .table-square {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 1280px) {
+  .booking .table-square {
+    width: 120px;
+    height: 120px;
+  }
+}
+.booking .table-square .table {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.booking .table--active {
+  width: 100%;
+  height: 100%;
+  background-color: #429242;
+  border: 5px dashed #005c00;
+}
+.booking .table--inactive {
+  background-color: lightgray;
+  border: 5px dashed lightgray;
+  pointer-events: none;
+}
+.booking .text--red {
+  color: red;
+}

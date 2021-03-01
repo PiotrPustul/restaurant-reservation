@@ -6,18 +6,19 @@ const Header = () => {
   const {
     isNavOpen,
     toggleNavOpen,
-    screenWidth
+    screenWidth,
+    bookingHandler
   } = useContext(NavContext);
 
   const showNavigation = () => {
     return isNavOpen ?
-      <span className="fas fa-times" onClick={toggleNavOpen}></span>
+      <span className="fas fa-times" onClick={toggleNavOpen} />
       :
-      <span className="fas fa-bars" onClick={toggleNavOpen}></span>
+      <span className="fas fa-bars" onClick={toggleNavOpen} />
   }
 
   return (
-    <div className="header">
+    <div className="header ">
       <div className="header__hamburger">
         {showNavigation()}
       </div>
@@ -31,15 +32,19 @@ const Header = () => {
             href="https://www.instagram.com/"
             target="_blank"
             rel="noreferrer">
-            <span className="fab fa-instagram"></span>
+            <span className="fab fa-instagram" />
           </a>
           <a
             href="https://twitter.com/"
             target="_blank"
             rel="noreferrer">
-            <span className="fab fa-twitter"></span>
+            <span className="fab fa-twitter" />
           </a>
         </div>}
+      <div className="header__book-btn" onClick={bookingHandler}>
+        <i class="fas fa-book-open"></i>
+        <span className="book-text">Bookings</span>
+      </div>
     </div>
   )
 }

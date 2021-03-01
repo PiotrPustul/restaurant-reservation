@@ -1,0 +1,66 @@
+.footer {
+  width: 100%;
+
+  background-color: rgb(56, 104, 127);
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 1280px) {
+    height: 16rem;
+
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  @mixin footer {
+    width: 100%;
+
+    padding: 2.4rem 1.2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 1280px) {
+      width: 30%;
+      height: 100%;
+
+      justify-content: center;
+    }
+  }
+
+  .footer__opening-hours {
+    @include footer;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+
+      &:nth-child(1) {
+        font-weight: 900;
+      }
+
+      span {
+        font-size: 1.8rem;
+        padding-bottom: 1.2rem;
+      }
+    }
+  }
+
+  .footer__contact-details {
+    @include footer;
+
+    div {
+      span {
+        font-size: 1.8rem;
+        padding-bottom: 1.2rem;
+      }
+      .fa-map-marker-alt,
+      .fa-phone-alt,
+      .fa-envelope {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
