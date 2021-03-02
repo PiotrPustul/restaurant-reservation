@@ -1,11 +1,17 @@
 import React, { useContext } from 'react';
+import {
+  NavLink
+} from "react-router-dom";
 import { Link } from "react-scroll";
 
 import { NavContext } from '../../context/NavContext';
 
 const Navigation = () => {
 
-  const { isNavOpen, toggleNavOpen, bookingHandler } = useContext(NavContext);
+  const {
+    isNavOpen,
+    toggleNavOpen,
+    bookingHandler } = useContext(NavContext);
 
   const showNavigation = () => {
     return isNavOpen ?
@@ -37,7 +43,11 @@ const Navigation = () => {
           </Link>
         </li>
         <li className="list-item">
-          <Link onClick={bookingHandler, toggleNavOpen}>Bookings</Link>
+          <NavLink
+            to="/booking"
+          // onClick={bookingHandler, toggleNavOpen}
+
+          >Bookings</NavLink>
         </li>
         <li className="list-item">
           <Link

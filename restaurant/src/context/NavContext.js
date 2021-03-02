@@ -26,6 +26,7 @@ const NavProvider = ({ children }) => {
         isNavOpen,
         toggleNavOpen,
         screenWidth,
+        booking,
         bookingHandler
       }}>
       {children}

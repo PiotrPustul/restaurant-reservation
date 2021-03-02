@@ -1,13 +1,8 @@
 .booking {
-  width: 100vw;
+  width: 100%;
   height: 100%;
   background-color: whitesmoke;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  position: relative;
   z-index: 1000;
   display: flex;
   flex-direction: column;
@@ -16,60 +11,72 @@
   .booking {
     height: 100%;
     position: fixed;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
     flex-direction: row;
   }
 }
-.booking .booking__aside {
-  width: 100%;
-  height: 100%;
-  border-right: 1px solid gray;
+.booking .booking__cancel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2.6rem 2.6rem 0;
+  z-index: 1000;
 }
 @media (min-width: 992px) {
-  .booking .booking__aside {
+  .booking .booking__cancel {
+    padding: 1.4rem 2rem 0;
+  }
+}
+.booking .booking__cancel .fa-times {
+  font-size: 2.4rem;
+}
+.booking .booking__form {
+  width: 100%;
+  background-color: whitesmoke;
+  border-top: 1px solid #bbbbbb;
+  border-right: 1px solid #bbbbbb;
+  border-left: 1px solid #bbbbbb;
+}
+@media (min-width: 992px) {
+  .booking .booking__form {
     width: 30%;
     height: 100%;
-    position: relative;
+    border-bottom: 1px solid #bbbbbb;
   }
 }
-.booking .booking__aside .aside__reservation {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-@media (min-width: 992px) {
-  .booking .booking__aside .aside__reservation {
-    display: flex;
-    justify-content: unset;
-  }
-}
-.booking .booking__aside .aside__reservation .reservation-heading {
+.booking .booking__form .form__heading {
   background-color: lightgray;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #bbbbbb;
   font-size: 2.4rem;
   padding: 2.4rem 1.6rem 1.6rem;
 }
 @media (min-width: 992px) {
-  .booking .booking__aside .aside__reservation .reservation-heading {
+  .booking .booking__form .form__heading {
     background-color: lightgray;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #bbbbbb;
     font-size: 2.4rem;
     padding: 2.4rem 1.6rem 0.8rem;
   }
 }
-.booking .booking__aside .aside__reservation .reservation__form {
+.booking .booking__form .form__details {
   display: flex;
   flex-direction: column;
 }
-.booking .booking__aside .aside__reservation .reservation__form .form-input__container {
+.booking .booking__form .form__details .form__input {
   width: 100%;
   height: auto;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #bbbbbb;
   font-size: 1.6rem;
   padding: 2.4rem 1.6rem 1.6rem;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
-.booking .booking__aside .aside__reservation .reservation__form .form-input__container .form-input__label {
+.booking .booking__form .form__details .form__input .form__input-label {
   width: 25%;
   height: 100%;
   color: #6e6e6e;
@@ -78,11 +85,11 @@
   align-items: center;
 }
 @media (min-width: 1280px) {
-  .booking .booking__aside .aside__reservation .reservation__form .form-input__container .form-input__label {
+  .booking .booking__form .form__details .form__input .form__input-label {
     width: 20%;
   }
 }
-.booking .booking__aside .aside__reservation .reservation__form .form-input__container input {
+.booking .booking__form .form__details .form__input input {
   width: 75%;
   height: 30px;
   background-color: lightgray;
@@ -91,187 +98,110 @@
   font-size: 1.6rem;
   font-style: italic;
   outline: none;
+  padding-left: 1rem;
 }
 @media (min-width: 1280px) {
-  .booking .booking__aside .aside__reservation .reservation__form .form-input__container input {
+  .booking .booking__form .form__details .form__input input {
     width: 80%;
   }
 }
-.booking .booking__aside .aside__reservation .reservation__form .form-input__container input[type=number]::-webkit-inner-spin-button,
-.booking .booking__aside .aside__reservation .reservation__form .form-input__container input[type=number]::-webkit-outer-spin-button {
+.booking .booking__form .form__details .form__input input[type=number]::-webkit-inner-spin-button,
+.booking .booking__form .form__details .form__input input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.booking .booking__aside .aside__reservation .reservation__form .form-details__container {
+.booking .booking__form .form__details .form__wrapper {
   width: 100%;
-  height: auto;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #bbbbbb;
   padding: 2.4rem 1.6rem 2.4rem;
   display: flex;
   justify-content: space-between;
 }
-.booking .booking__aside .aside__reservation .reservation__form .form-details__container .form-details__label {
+.booking .booking__form .form__details .form__wrapper .form__label {
   width: 25%;
   color: #6e6e6e;
   font-size: 1.4rem;
 }
 @media (min-width: 1280px) {
-  .booking .booking__aside .aside__reservation .reservation__form .form-details__container .form-details__label {
+  .booking .booking__form .form__details .form__wrapper .form__label {
     width: 20%;
   }
 }
-.booking .booking__aside .aside__reservation .reservation__form .form-details__container .form-details__info {
+.booking .booking__form .form__details .form__wrapper .form__info {
   width: 50%;
 }
 @media (min-width: 1280px) {
-  .booking .booking__aside .aside__reservation .reservation__form .form-details__container .form-details__info {
+  .booking .booking__form .form__details .form__wrapper .form__info {
     width: 55%;
   }
 }
-.booking .booking__aside .aside__reservation .reservation__form .form-details__container .form-details__option {
+.booking .booking__form .form__details .form__wrapper .form__option {
   width: 25%;
   display: flex;
   justify-content: flex-end;
 }
-.booking .booking__aside .aside__reservation .reservation__form .form-details__container .form-details__option .fa-arrow-down,
-.booking .booking__aside .aside__reservation .reservation__form .form-details__container .form-details__option .fa-arrow-up,
-.booking .booking__aside .aside__reservation .reservation__form .form-details__container .form-details__option .fa-plus-circle,
-.booking .booking__aside .aside__reservation .reservation__form .form-details__container .form-details__option .fa-minus-circle {
+.booking .booking__form .form__details .form__wrapper .form__option .fa-arrow-down,
+.booking .booking__form .form__details .form__wrapper .form__option .fa-arrow-up,
+.booking .booking__form .form__details .form__wrapper .form__option .fa-plus-circle,
+.booking .booking__form .form__details .form__wrapper .form__option .fa-minus-circle {
   color: green;
   cursor: pointer;
   font-size: 1.8rem;
   margin-left: 2rem;
 }
-.booking .booking__aside .aside__reservation .reservation__form .form-details__container .form-details__option .disabled {
+.booking .booking__form .form__details .form__wrapper .form__option .disabled {
   color: gray;
 }
-.booking .booking__aside .aside__reservation .reservation__form .form-details__container .form-details__tabel {
+.booking .booking__form .form__details .form__wrapper .form__tabel {
   width: 75%;
+  height: 18px;
 }
 @media (min-width: 1280px) {
-  .booking .booking__aside .aside__reservation .reservation__form .form-details__container .form-details__tabel {
+  .booking .booking__form .form__details .form__wrapper .form__tabel {
     width: 80%;
   }
 }
-.booking .booking__aside .aside__reservation .reservation__form .form__calendar {
+.booking .booking__form .form__calendar {
   width: 100%;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #bbbbbb;
   padding: 1.2rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.booking .booking__aside .aside__reservation .reservation__form .form__calendar .react-calendar {
-  transition: all ease-in-out 250ms;
-}
-.booking .booking__main {
-  width: 100%;
-  height: 80vh;
-  background-color: #f9f9fb;
-  border-bottom: 1px solid gray;
+.booking .booking__form .aside__submit {
+  position: absolute;
+  margin: auto;
+  right: 0;
+  bottom: 10px;
+  left: 0;
   display: flex;
-  justify-content: space-between;
-}
-@media (min-width: 992px) {
-  .booking .booking__main {
-    width: 70%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-}
-.booking .booking__main .main-restaurant {
-  width: 33%;
-  padding-top: 5rem;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 @media (min-width: 992px) {
-  .booking .booking__main .main-restaurant {
+  .booking .booking__form .aside__submit {
     width: 100%;
-    height: 33%;
-    padding-top: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    position: unset;
+    padding: 2.4rem 0;
   }
 }
-.booking .booking__submit {
-  width: 100%;
-  background-color: white;
-  border-bottom: 1px solid gray;
-  padding: 2.4rem 0;
-  display: flex;
-  justify-content: center;
-}
-@media (min-width: 992px) {
-  .booking .booking__submit {
-    width: 100px;
-    background-color: transparent;
-    border-bottom: none;
-    position: absolute;
-    margin: auto;
-    left: 100px;
-    bottom: 50px;
-  }
-}
-.booking .booking__submit .submit-text {
-  margin-right: 0.5rem;
-}
-.booking .table-square {
-  width: 70px;
-  height: 70px;
-  border: 2px solid black;
-  margin-bottom: 2.5rem;
-}
-@media (min-width: 576px) {
-  .booking .table-square {
-    width: 80px;
-    height: 80px;
-  }
-}
-@media (min-width: 992px) {
-  .booking .table-square {
-    width: 90px;
-    height: 90px;
-    margin-bottom: 0;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-@media (min-width: 1280px) {
-  .booking .table-square {
-    width: 120px;
-    height: 120px;
-  }
-}
-.booking .table-square .table {
-  width: 100%;
-  height: 100%;
+.booking .booking__form .aside__submit .submit-btn {
+  background-color: gray;
+  color: white;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
-  font-size: 3rem;
+  padding: 1rem 2rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
-.booking .table--active {
-  width: 100%;
-  height: 100%;
-  background-color: #429242;
-  border: 5px dashed #005c00;
+.booking .booking__form .aside__submit .submit-btn:hover {
+  transition: 1.5s;
+  background-color: green;
 }
-.booking .table--inactive {
-  background-color: lightgray;
-  border: 5px dashed lightgray;
-  pointer-events: none;
+.booking .booking__form .aside__submit .submit-btn .submit-btn__text {
+  margin-right: 1.5rem;
 }
 .booking .text--red {
   color: red;

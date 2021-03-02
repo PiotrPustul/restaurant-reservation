@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
-
+import {
+  NavLink as Link,
+} from "react-router-dom";
 import { NavContext } from '../../context/NavContext';
 
 const Header = () => {
@@ -7,6 +9,7 @@ const Header = () => {
     isNavOpen,
     toggleNavOpen,
     screenWidth,
+    booking,
     bookingHandler
   } = useContext(NavContext);
 
@@ -41,9 +44,11 @@ const Header = () => {
             <span className="fab fa-twitter" />
           </a>
         </div>}
-      <div className="header__book-btn" onClick={bookingHandler}>
-        <i class="fas fa-book-open"></i>
-        <span className="book-text">Bookings</span>
+      <div className="header__book-btn">
+        <Link to="/booking" onClick={bookingHandler}>
+          <span className="fas fa-book-open"></span>
+          <span className="book-text">Bookings</span>
+        </Link>
       </div>
     </div>
   )
