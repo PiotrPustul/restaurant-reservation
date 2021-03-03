@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import {
-  NavLink as Link,
-} from "react-router-dom";
+
+import { NavLink as Link } from "react-router-dom";
+
 import { NavContext } from '../../context/NavContext';
 
 const Header = () => {
@@ -9,7 +9,6 @@ const Header = () => {
     isNavOpen,
     toggleNavOpen,
     screenWidth,
-    booking,
     bookingHandler
   } = useContext(NavContext);
 

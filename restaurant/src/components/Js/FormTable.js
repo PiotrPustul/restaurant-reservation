@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
-const BookingReservationTable = ({ tableNr }) => {
+import { BookingContext } from '../../context/BookingContext';
+
+const BookingReservationTable = () => {
+  const { tableNr } = useContext(BookingContext);
+
   return (
     < div className="form__details" >
       <span className="form__label">Tabel</span>

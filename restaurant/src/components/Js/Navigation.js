@@ -7,11 +7,10 @@ import { Link } from "react-scroll";
 import { NavContext } from '../../context/NavContext';
 
 const Navigation = () => {
-
   const {
     isNavOpen,
-    toggleNavOpen,
-    bookingHandler } = useContext(NavContext);
+    toggleNavOpen
+  } = useContext(NavContext);
 
   const showNavigation = () => {
     return isNavOpen ?

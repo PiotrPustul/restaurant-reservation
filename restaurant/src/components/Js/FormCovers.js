@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+
+import { BookingContext } from '../../context/BookingContext';
 
 const BookingReservationCovers = () => {
-  const [coversAmount, setCoverAmount] = useState(1);
-
-  const increaseCovers = () => setCoverAmount(prevValue => prevValue + 1);
-
-  const decreaseCovers = () => setCoverAmount(prevValue => prevValue - 1);
-
+  const {
+    coversAmount,
+    increaseCovers,
+    decreaseCovers
+  } = useContext(BookingContext);
 
   return (
     <>

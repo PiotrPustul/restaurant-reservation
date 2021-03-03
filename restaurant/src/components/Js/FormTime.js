@@ -1,26 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+
+import { BookingContext } from '../../context/BookingContext';
 
 const BookingReservationTime = () => {
-  const [timenHours, setTimeHours] = useState(12);
-  const [timeMinutes, setTimeMinutes] = useState(0);
-
-  const increaseTime = () => {
-    setTimeMinutes(prevValue => prevValue + 15)
-
-    if (timeMinutes >= 45) {
-      setTimeMinutes(0);
-      setTimeHours(prevValue => prevValue + 1)
-    }
-  }
-
-  const decreaseTime = () => {
-    setTimeMinutes(prevValue => prevValue - 15)
-
-    if (timeMinutes <= 0) {
-      setTimeMinutes(45);
-      setTimeHours(prevValue => prevValue - 1)
-    }
-  }
+  const {
+    timenHours,
+    timeMinutes,
+    increaseTime,
+    decreaseTime
+  } = useContext(BookingContext);
 
   return (
     <>

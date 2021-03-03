@@ -36,7 +36,6 @@ const BookingTables = () => {
       <div class="booking__tables">
         {createTables(thirdRow)}
       </div>
-
     </div>
   )
 }

@@ -97,4 +97,15 @@
     border: 5px dashed rgb(211, 211, 211);
     pointer-events: none;
   }
+
+  .table--booked {
+    background-color: peru;
+    border: 5px dashed rgb(147, 87, 27);
+    color: transparent;
+    background-image: url("../../static/images/lock2.png");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+  }
 }

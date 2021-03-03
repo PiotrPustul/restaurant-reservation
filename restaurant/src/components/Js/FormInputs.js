@@ -1,14 +1,12 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 
 import { BookingContext } from '../../context/BookingContext';
 
-
 const BookingReservationInputs = () => {
-  const {
-    handleInput } = useContext(BookingContext);
+  const { handleInput } = useContext(BookingContext);
+
   return (
     <>
-
       <div className="form__input">
         <span className="form__input-label">Name</span>
         <input type="text" name="name" onChange={handleInput} />
