@@ -20,13 +20,13 @@ const BookingReservationCovers = () => {
           {coversAmount <= 1 ?
             <span
               disabled={true}
-              class="fas fa-minus-circle disabled" />
+              className="fas fa-minus-circle disabled" />
             :
             <span
-              class="fas fa-minus-circle"
+              className="fas fa-minus-circle"
               onClick={decreaseCovers} />
           }
-          <span class="fas fa-plus-circle" onClick={increaseCovers} />
+          <span className="fas fa-plus-circle" onClick={increaseCovers} />
         </div>
       </div>
     </>

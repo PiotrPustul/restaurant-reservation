@@ -1,7 +1,10 @@
 .booking__form {
   width: 100%;
+  height: auto;
 
-  background-color: whitesmoke;
+  overflow-y: auto;
+
+  background-color: rgb(249, 249, 251);
   border-top: 1px solid rgb(187, 187, 187);
   border-right: 1px solid rgb(187, 187, 187);
   border-left: 1px solid rgb(187, 187, 187);
@@ -14,6 +17,8 @@
   }
 
   .form__heading {
+    min-width: 100%;
+
     background-color: lightgray;
     border-bottom: 1px solid rgb(187, 187, 187);
     font-size: 2.4rem;
@@ -60,8 +65,8 @@
         width: 75%;
         height: 30px;
 
-        background-color: rgb(211, 211, 211);
-        border: none;
+        background-color: rgb(244, 244, 244);
+        border: 0.1rem solid black;
         border-radius: 10px;
         font-size: 1.6rem;
         font-style: italic;
@@ -151,6 +156,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .react-calendar {
+      background-color: transparent;
+      border: none;
+    }
   }
 
   .form__submit-btn {

@@ -127,7 +127,6 @@ const Menu = () => {
         <div className="menu__name">
           <h2 className="menu__heading">PUDDINGS</h2>
           <div className="menu__container">
-
             <div className="menu__meal">
               <p className="menu__title">
                 Spiced fruit Bakewell tart, clotted cream

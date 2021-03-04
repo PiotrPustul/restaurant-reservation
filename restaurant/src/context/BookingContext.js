@@ -21,7 +21,6 @@ const BookingProvider = ({ children }) => {
   const [durationHours, setDurationHours] = useState(1);
   const [durationMinutes, setDurationMinutes] = useState(0);
 
-  const allTables = [...document.getElementsByClassName('booking__table')];
   const [tableNr, setTableNr] = useState('');
 
   const [confirmBooking, setConfirmBooking] = useState(false);
@@ -32,7 +31,7 @@ const BookingProvider = ({ children }) => {
     setInputsValue({
       ...inputsValue,
       [name]: value,
-    })
+    });
   }
   const handleCalendarVisibility = () => setShowCalendar(prevValue => !prevValue);
 
@@ -74,12 +73,12 @@ const BookingProvider = ({ children }) => {
   }
 
   const selectTable = (e) => {
-    allTables.forEach(table => {
+    const tables = [...document.getElementsByClassName('booking__table')];
+    tables.forEach(table => {
       const id = e.target.id;
 
       if (id === table.id) {
         table.classList.toggle("table--active");
-
         setTableNr(prevValue => prevValue === id ? '' : id);
       }
 
@@ -90,22 +89,22 @@ const BookingProvider = ({ children }) => {
   }
 
   useEffect(() => {
-    const name = inputsValue.name
-    const email = inputsValue.email
-    const phone = inputsValue.phone
+    const name = inputsValue.name;
+    const email = inputsValue.email;
+    const phone = inputsValue.phone;
+    const activeTables = document.querySelectorAll('.table--active');
     const submitBtn = document.querySelector(".submit-btn");
 
-    if (name !== '' && email !== '' && phone !== '' && tableNr !== '') {
-      submitBtn.classList.toggle("submit-btn--active");
+    if (submitBtn !== null) {
+      if (name !== '' && email !== '' && phone !== '' && activeTables.length > 0) {
+        submitBtn.classList.toggle("submit-btn--active");
+      } else {
+        submitBtn.classList.remove("submit-btn--active");
+      }
     }
+  })
 
-    if (name === '' || email === '' || phone === '' || tableNr === '') {
-      submitBtn.classList.remove("submit-btn--active");
-    }
-  }, [inputsValue, tableNr])
-
-  const bookTable = (e) => {
-    e.preventDefault();
+  const bookTable = () => {
     const name = inputsValue.name;
     const email = inputsValue.email;
     const phone = inputsValue.phone;
@@ -122,6 +121,11 @@ const BookingProvider = ({ children }) => {
   }
 
   const resetStateValues = () => {
+    setInputsValue({
+      name: '',
+      email: '',
+      phone: '',
+    })
     setTimeHours(prevValue => 12);
     setTimeMinutes(prevValue => 0);
     onChange(new Date());

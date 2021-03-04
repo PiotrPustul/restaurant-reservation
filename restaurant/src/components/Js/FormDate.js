@@ -17,12 +17,12 @@ const BookingReservationDate = () => {
     return (
       showCalendar ?
         <span
-          class="fas fa-arrow-up"
+          className="fas fa-arrow-up"
           onClick={handleCalendarVisibility}>
         </span>
         :
         <span
-          class="fas fa-arrow-down"
+          className="fas fa-arrow-down"
           onClick={handleCalendarVisibility}>
         </span>
     )

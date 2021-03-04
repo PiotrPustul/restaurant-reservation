@@ -18,15 +18,15 @@ const Footer = () => {
       </div >
       <div className="footer__contact-details">
         <div>
-          <span class="fas fa-map-marker-alt"></span>
+          <span className="fas fa-map-marker-alt"></span>
           <span>01 Big Ben, LONDON SW007</span>
         </div>
         <div>
-          <span class="fas fa-phone-alt"></span>
+          <span className="fas fa-phone-alt"></span>
           <span>020 7766 5544</span>
         </div>
         <div>
-          <span class="fas fa-envelope"></span>
+          <span className="fas fa-envelope"></span>
           <span>Lockdown@Lockdown.co.uk</span>
         </div>
       </div>

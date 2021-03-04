@@ -11,15 +11,16 @@ const BookingTables = () => {
 
   const createTables = array => {
     return array.map(item => {
-      return <div className="booking__table-wrapper">
-        <span
-          className="booking__table"
-          id={item}
-          onClick={selectTable}
-        >
-          {item}
-        </span>
-      </div>
+      return (
+        <div className="booking__table-wrapper">
+          <span
+            className="booking__table"
+            id={item}
+            onClick={selectTable}
+          >
+            {item}
+          </span>
+        </div>)
     })
   }
 
@@ -29,11 +30,11 @@ const BookingTables = () => {
         {createTables(firstRow)}
       </div>
 
-      <div class="booking__tables">
+      <div className="booking__tables">
         {createTables(secondRow)}
       </div>
 
-      <div class="booking__tables">
+      <div className="booking__tables">
         {createTables(thirdRow)}
       </div>
     </div>

@@ -9,7 +9,6 @@ const Header = () => {
     isNavOpen,
     toggleNavOpen,
     screenWidth,
-    bookingHandler
   } = useContext(NavContext);
 
   const showNavigation = () => {
@@ -44,7 +43,7 @@ const Header = () => {
           </a>
         </div>}
       <div className="header__book-btn">
-        <Link to="/booking" onClick={bookingHandler}>
+        <Link to="/booking">
           <span className="fas fa-book-open"></span>
           <span className="book-text">Bookings</span>
         </Link>

@@ -12,62 +12,58 @@ const Navigation = () => {
     toggleNavOpen
   } = useContext(NavContext);
 
-  const showNavigation = () => {
-    return isNavOpen ?
-      <ul className="navigation__list">
-        <li className="list-item">
-          <Link
-            activeClass="active"
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={800}
-            onClick={toggleNavOpen}
-          >
-            About
-          </Link>
-        </li>
-        <li className="list-item">
-          <Link
-            activeClass="active"
-            to="menu"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={800}
-            onClick={toggleNavOpen}
-          >
-            Menu
-          </Link>
-        </li>
-        <li className="list-item">
-          <NavLink
-            to="/booking"
-          // onClick={bookingHandler, toggleNavOpen}
-
-          >Bookings</NavLink>
-        </li>
-        <li className="list-item">
-          <Link
-            activeClass="active"
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={800}
-            onClick={toggleNavOpen}
-          >
-            Contact
-          </Link></li>
-      </ul>
-      :
-      null
-  }
-
   return (
     <>
-      { showNavigation()}
+      {  isNavOpen ?
+        <ul className="navigation__list">
+          <li className="list-item">
+            <Link
+              activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={800}
+              onClick={toggleNavOpen}
+            >
+              About
+          </Link>
+          </li>
+          <li className="list-item">
+            <Link
+              activeClass="active"
+              to="menu"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={800}
+              onClick={toggleNavOpen}
+            >
+              Menu
+          </Link>
+          </li>
+          <li className="list-item">
+            <NavLink
+              to="/booking"
+              onClick={toggleNavOpen}
+            >Bookings</NavLink>
+          </li>
+          <li className="list-item">
+            <Link
+              activeClass="active"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={800}
+              onClick={toggleNavOpen}
+            >
+              Contact
+          </Link></li>
+        </ul>
+        :
+        null
+      }
     </>
   )
 }

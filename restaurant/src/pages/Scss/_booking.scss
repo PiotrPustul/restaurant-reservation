@@ -40,41 +40,9 @@
     }
   }
 
-  .form__message {
-    width: 90%;
-    height: 250px;
-
-    background-color: aquamarine;
-    border-radius: 1rem;
-    opacity: 0.1;
-    padding: 2.4rem;
-
-    position: absolute;
-    margin: auto;
-    top: 50%;
-    right: 0;
-    left: 0;
-    transform: translateY(-50%);
-
-    .message__exit-btn {
-      border: none;
-      background-color: transparent;
-
-      position: absolute;
-      margin: auto;
-      top: 0;
-      right: 0;
-      .fa-times {
-        cursor: pointer;
-        font-size: 1.8rem;
-        margin: 2.4rem 1.2rem;
-      }
-    }
-  }
-
   .block {
     pointer-events: none;
-    opacity: 0.2;
+    opacity: 0.1;
   }
 
   .text--red {

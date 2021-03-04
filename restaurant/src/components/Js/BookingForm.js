@@ -14,9 +14,7 @@ const BookingForm = () => {
 
   return (
     <div className="booking__form">
-
       <h1 className="form__heading">Reservation details</h1>
-
       <div className="form__wrapper">
         <FormInputs />
         <FormDate />
@@ -27,7 +25,7 @@ const BookingForm = () => {
         <div className="form__submit-btn">
           <button className="submit-btn" onClick={bookTable}>
             <span className="submit-btn__text">Book now</span>
-            <span className="fas fa-pen-nib"> </span>
+            <span className="fas fa-pen-nib" />
           </button>
         </div>
       </div>

@@ -5,10 +5,8 @@ export const NavContext = createContext();
 const NavProvider = ({ children }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [screenWidth, setScreenWidth] = useState(0);
-  const [booking, setBooking] = useState(false);
 
   const toggleNavOpen = () => setIsNavOpen(prevValue => !prevValue);
-  const bookingHandler = () => setBooking(prevValue => !prevValue);
 
   useEffect(() => {
     function updateSize() {
@@ -26,8 +24,6 @@ const NavProvider = ({ children }) => {
         isNavOpen,
         toggleNavOpen,
         screenWidth,
-        booking,
-        bookingHandler
       }}>
       {children}
     </NavContext.Provider>
