@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/restaurant-reservation/static/css/main.4fc93c2e.chunk.css",
+    "main.js": "/restaurant-reservation/static/js/main.1c6870c5.chunk.js",
+    "main.js.map": "/restaurant-reservation/static/js/main.1c6870c5.chunk.js.map",
+    "runtime-main.js": "/restaurant-reservation/static/js/runtime-main.bce4934e.js",
+    "runtime-main.js.map": "/restaurant-reservation/static/js/runtime-main.bce4934e.js.map",
+    "static/css/2.5f156e23.chunk.css": "/restaurant-reservation/static/css/2.5f156e23.chunk.css",
+    "static/js/2.70e2b23a.chunk.js": "/restaurant-reservation/static/js/2.70e2b23a.chunk.js",
+    "static/js/2.70e2b23a.chunk.js.map": "/restaurant-reservation/static/js/2.70e2b23a.chunk.js.map",
+    "index.html": "/restaurant-reservation/index.html",
+    "static/css/2.5f156e23.chunk.css.map": "/restaurant-reservation/static/css/2.5f156e23.chunk.css.map",
+    "static/css/main.4fc93c2e.chunk.css.map": "/restaurant-reservation/static/css/main.4fc93c2e.chunk.css.map",
+    "static/js/2.70e2b23a.chunk.js.LICENSE.txt": "/restaurant-reservation/static/js/2.70e2b23a.chunk.js.LICENSE.txt",
+    "static/media/drinks.064d1e74.jpg": "/restaurant-reservation/static/media/drinks.064d1e74.jpg",
+    "static/media/events.2f61e0e3.jpg": "/restaurant-reservation/static/media/events.2f61e0e3.jpg",
+    "static/media/food.5303c375.jpg": "/restaurant-reservation/static/media/food.5303c375.jpg",
+    "static/media/picture1.7dee50b3.jpg": "/restaurant-reservation/static/media/picture1.7dee50b3.jpg",
+    "static/media/picture2.c8ce8784.jpg": "/restaurant-reservation/static/media/picture2.c8ce8784.jpg",
+    "static/media/picture3.ef9924aa.jpg": "/restaurant-reservation/static/media/picture3.ef9924aa.jpg",
+    "static/media/picture4.890951f6.jpg": "/restaurant-reservation/static/media/picture4.890951f6.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bce4934e.js",
+    "static/css/2.5f156e23.chunk.css",
+    "static/js/2.70e2b23a.chunk.js",
+    "static/css/main.4fc93c2e.chunk.css",
+    "static/js/main.1c6870c5.chunk.js"
+  ]
+}
