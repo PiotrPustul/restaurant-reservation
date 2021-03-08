@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
@@ -45,29 +45,5 @@ const App = () => {
     </div>
   );
 }
-
-// const App = () => {
-//   return (
-//     <div className="App">
-//       <NavProvider >
-//         <header>
-//           <Header />
-//         </header>
-//         <nav>
-//           <Navigation />
-//         </nav>
-//         <main>
-//           <Slides />
-//           <About />
-//           <Menu />
-//           <Booking />
-//         </main>
-//         <footer>
-//           <Footer />
-//         </footer>
-//       </NavProvider>
-//     </div>
-//   );
-// }
 
 export default App;
