@@ -16,18 +16,13 @@ const NavProvider = ({ children }) => {
     updateSize();
 
     return screenWidth;
-  })
+  });
 
   return (
-    <NavContext.Provider
-      value={{
-        isNavOpen,
-        toggleNavOpen,
-        screenWidth,
-      }}>
+    <NavContext.Provider value={{ isNavOpen, toggleNavOpen, screenWidth }}>
       {children}
     </NavContext.Provider>
-  )
+  );
 };
 
 export default NavProvider;

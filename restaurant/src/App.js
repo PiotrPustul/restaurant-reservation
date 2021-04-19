@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  HashRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+import { HashRouter as Router, Switch, Route, } from "react-router-dom";
 
 import NavProvider from './context/NavContext';
 import BookingProvider from './context/BookingContext';
@@ -11,14 +7,14 @@ import BookingProvider from './context/BookingContext';
 import './App.scss';
 import './base/style.scss';
 
-import Navigation from './components/Js/Navigation';
-import Slides from './components/Js/Slides';
+import Navigation from './components/Navigation/Navigation';
+import Slides from './components/Slides/Slides';
 
-import Header from './pages/Js/Header';
-import About from './pages/Js/About';
-import Menu from './pages/Js/Menu';
-import Booking from './pages/Js/Booking';
-import Footer from './pages/Js/Footer';
+import Header from './pages/Header/Header';
+import About from './pages/About/About';
+import Menu from './pages/Menu/Menu';
+import Booking from './pages/Booking/Booking';
+import Footer from './pages/Footer/Footer';
 
 const App = () => {
   return (
@@ -35,9 +31,7 @@ const App = () => {
                 <Menu />
                 <Footer />
               </Route>
-              <Route path='/booking'>
-                <Booking />
-              </Route>
+              <Route path='/booking' component={Booking} />
             </Switch>
           </BookingProvider>
         </NavProvider>

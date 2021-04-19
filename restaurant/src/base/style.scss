@@ -1,13 +1,19 @@
 @import "reset";
 
-@import "../components/Scss/slides";
-@import "../components/Scss/navigation";
-@import "../components/Scss/bookingForm";
-@import "../components/Scss/bookingTables";
-@import "../components/Scss/bookingMessage";
+@import "../components/Slides/slides";
+@import "../components/Navigation/navigation";
 
-@import "../pages/Scss/header";
-@import "../pages/Scss/about";
-@import "../pages/Scss/menu";
-@import "../pages/Scss/booking";
-@import "../pages/Scss/footer";
+@import "../components/Booking/Booking-form/bookingForm";
+@import "../components/Booking/Booking-form/Form-elements/Form-details/formDetails";
+@import "../components/Booking/Booking-form/Form-elements/Form-inputs/Input-form/formInput";
+
+@import "../components/Booking/Restaurant/restaurant";
+@import "../components/Booking/Restaurant/Tables-row/tablesRow";
+@import "../components/Booking/Booking-message/bookingMessage";
+@import "../components/Booking/Booking-message/Message-detail/messageDetail";
+
+@import "../pages/Header/header";
+@import "../pages/About/about";
+@import "../pages/Menu/menu";
+@import "../pages/Booking/booking";
+@import "../pages/Footer/footer";

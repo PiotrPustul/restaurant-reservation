@@ -8,21 +8,14 @@ const BookingProvider = ({ children }) => {
     email: "",
     phone: "",
   });
-
   const [value, onChange] = useState(new Date());
-  const date = value.toUTCString().slice(0, 16);
   const [showCalendar, setShowCalendar] = useState(false);
-
   const [timenHours, setTimeHours] = useState(12);
   const [timeMinutes, setTimeMinutes] = useState(0);
-
   const [coversAmount, setCoverAmount] = useState(1);
-
   const [durationHours, setDurationHours] = useState(1);
   const [durationMinutes, setDurationMinutes] = useState(0);
-
   const [tableNr, setTableNr] = useState('');
-
   const [confirmBooking, setConfirmBooking] = useState(false);
 
   const handleInput = (e) => {
@@ -32,7 +25,8 @@ const BookingProvider = ({ children }) => {
       ...inputsValue,
       [name]: value,
     });
-  }
+  };
+
   const handleCalendarVisibility = () => setShowCalendar(prevValue => !prevValue);
 
   const increaseTime = () => {
@@ -42,7 +36,7 @@ const BookingProvider = ({ children }) => {
       setTimeMinutes(0);
       setTimeHours(prevValue => prevValue + 1)
     }
-  }
+  };
   const decreaseTime = () => {
     setTimeMinutes(prevValue => prevValue - 15)
 
@@ -50,7 +44,7 @@ const BookingProvider = ({ children }) => {
       setTimeMinutes(45);
       setTimeHours(prevValue => prevValue - 1)
     }
-  }
+  };
 
   const increaseCovers = () => setCoverAmount(prevValue => prevValue + 1);
   const decreaseCovers = () => setCoverAmount(prevValue => prevValue - 1);
@@ -62,7 +56,7 @@ const BookingProvider = ({ children }) => {
       setDurationMinutes(0);
       setDurationHours(prevValue => prevValue + 1)
     }
-  }
+  };
   const decreaseDuration = () => {
     setDurationMinutes(prevValue => prevValue - 15)
 
@@ -70,10 +64,10 @@ const BookingProvider = ({ children }) => {
       setDurationMinutes(45);
       setDurationHours(prevValue => prevValue - 1)
     }
-  }
+  };
 
   const selectTable = (e) => {
-    const tables = [...document.getElementsByClassName('booking__table')];
+    const tables = [...document.getElementsByClassName('table')];
     tables.forEach(table => {
       const id = e.target.id;
 
@@ -85,8 +79,8 @@ const BookingProvider = ({ children }) => {
       if (id !== table.id) {
         table.classList.toggle("table--inactive");
       }
-    })
-  }
+    });
+  };
 
   useEffect(() => {
     const name = inputsValue.name;
@@ -102,23 +96,23 @@ const BookingProvider = ({ children }) => {
         submitBtn.classList.remove("submit-btn--active");
       }
     }
-  })
+  });
 
   const bookTable = () => {
     const name = inputsValue.name;
     const email = inputsValue.email;
     const phone = inputsValue.phone;
     const bookingForm = document.querySelector('.booking__form');
-    const bookingTables = document.querySelector('.booking__restaurant');
+    const restaurant = document.querySelector('.restaurant');
     const bookingCancelBtn = document.querySelector('.booking__cancel-btn');
 
     if (name !== '' && email !== '' && phone !== '' && tableNr !== '') {
       setConfirmBooking(true);
       bookingForm.classList.add('block');
-      bookingTables.classList.add('block');
+      restaurant.classList.add('block');
       bookingCancelBtn.classList.add('block');
     }
-  }
+  };
 
   const resetStateValues = () => {
     setInputsValue({
@@ -134,7 +128,7 @@ const BookingProvider = ({ children }) => {
     setDurationMinutes(prevValue => 0);
     setTableNr(prevValue => '');
     setConfirmBooking(false);
-  }
+  };
 
   const removeTablesClass = () => {
     const tableActive = [...document.getElementsByClassName('table--active')];
@@ -148,20 +142,20 @@ const BookingProvider = ({ children }) => {
     tableInactive.forEach(table => {
       table.classList.remove('table--inactive');
     })
-  }
+  };
 
   const closeBookingMessage = () => {
     const bookingForm = document.querySelector('.booking__form');
-    const bookingTables = document.querySelector('.booking__restaurant');
+    const restaurant = document.querySelector('.restaurant');
     const bookingCancelBtn = document.querySelector('.booking__cancel-btn');
 
     bookingForm.classList.remove('block');
-    bookingTables.classList.remove('block');
+    restaurant.classList.remove('block');
     bookingCancelBtn.classList.remove('block');
 
     resetStateValues()
     removeTablesClass()
-  }
+  };
 
   return (
     <BookingContext.Provider
@@ -170,7 +164,6 @@ const BookingProvider = ({ children }) => {
         handleInput,
 
         value,
-        date,
         onChange,
         showCalendar,
         handleCalendarVisibility,
@@ -195,6 +188,7 @@ const BookingProvider = ({ children }) => {
         confirmBooking,
         bookTable,
         closeBookingMessage,
+        resetStateValues,
       }}>
       {children}
     </BookingContext.Provider>

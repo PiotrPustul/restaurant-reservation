@@ -1,0 +1,90 @@
+.restaurant__tables-row {
+   width: 33%;
+
+   padding: 5rem 0;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   @media (min-width: 992px) {
+      width: 100%;
+      height: 33%;
+
+      padding-top: 0;
+
+      flex-direction: row;
+      justify-content: space-around;
+   }
+
+   .restaurant__table {
+      width: 70px;
+      height: 70px;
+
+      background-color: white;
+      border-radius: 50%;
+      margin-bottom: 2.5rem;
+      overflow: hidden;
+
+      @media (min-width: 576px) {
+         width: 80px;
+         height: 80px;
+      }
+
+      @media (min-width: 992px) {
+         width: 90px;
+         height: 90px;
+
+         margin-bottom: 0;
+
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+      @media (min-width: 1280px) {
+         width: 120px;
+         height: 120px;
+      }
+
+      .table {
+         width: 100%;
+         height: 100%;
+
+         cursor: pointer;
+         font-size: 3rem;
+         font-weight: 900;
+
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+   }
+}
+
+.table--active {
+   background-color: rgb(66, 146, 66);
+   border: 1px solid black;
+   border-radius: 50%;
+   color: white;
+}
+
+.table--inactive {
+   background-color: rgb(211, 211, 211);
+   border: 1px solid black;
+   border-radius: 50%;
+   pointer-events: none;
+}
+
+.table--booked {
+   background-color: darkgray;
+   background-image: url("../../../../static/images/lock2.png");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 70%;
+   border: 1px solid black;
+   border-radius: 50%;
+   color: transparent;
+   pointer-events: none;
+}
