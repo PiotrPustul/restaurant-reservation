@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/restaurant-reservation/static/css/main.c20308f1.chunk.css",
-    "main.js": "/restaurant-reservation/static/js/main.83a150c0.chunk.js",
-    "main.js.map": "/restaurant-reservation/static/js/main.83a150c0.chunk.js.map",
+    "main.css": "/restaurant-reservation/static/css/main.230c68c6.chunk.css",
+    "main.js": "/restaurant-reservation/static/js/main.771bb356.chunk.js",
+    "main.js.map": "/restaurant-reservation/static/js/main.771bb356.chunk.js.map",
     "runtime-main.js": "/restaurant-reservation/static/js/runtime-main.bce4934e.js",
     "runtime-main.js.map": "/restaurant-reservation/static/js/runtime-main.bce4934e.js.map",
-    "static/css/2.5f156e23.chunk.css": "/restaurant-reservation/static/css/2.5f156e23.chunk.css",
-    "static/js/2.39f62104.chunk.js": "/restaurant-reservation/static/js/2.39f62104.chunk.js",
-    "static/js/2.39f62104.chunk.js.map": "/restaurant-reservation/static/js/2.39f62104.chunk.js.map",
+    "static/css/2.baf3e3ff.chunk.css": "/restaurant-reservation/static/css/2.baf3e3ff.chunk.css",
+    "static/js/2.64876a6d.chunk.js": "/restaurant-reservation/static/js/2.64876a6d.chunk.js",
+    "static/js/2.64876a6d.chunk.js.map": "/restaurant-reservation/static/js/2.64876a6d.chunk.js.map",
     "index.html": "/restaurant-reservation/index.html",
-    "static/css/2.5f156e23.chunk.css.map": "/restaurant-reservation/static/css/2.5f156e23.chunk.css.map",
-    "static/css/main.c20308f1.chunk.css.map": "/restaurant-reservation/static/css/main.c20308f1.chunk.css.map",
-    "static/js/2.39f62104.chunk.js.LICENSE.txt": "/restaurant-reservation/static/js/2.39f62104.chunk.js.LICENSE.txt",
+    "static/css/2.baf3e3ff.chunk.css.map": "/restaurant-reservation/static/css/2.baf3e3ff.chunk.css.map",
+    "static/css/main.230c68c6.chunk.css.map": "/restaurant-reservation/static/css/main.230c68c6.chunk.css.map",
+    "static/js/2.64876a6d.chunk.js.LICENSE.txt": "/restaurant-reservation/static/js/2.64876a6d.chunk.js.LICENSE.txt",
     "static/media/drinks.064d1e74.jpg": "/restaurant-reservation/static/media/drinks.064d1e74.jpg",
     "static/media/events.2f61e0e3.jpg": "/restaurant-reservation/static/media/events.2f61e0e3.jpg",
     "static/media/food.5303c375.jpg": "/restaurant-reservation/static/media/food.5303c375.jpg",
@@ -22,9 +22,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.bce4934e.js",
-    "static/css/2.5f156e23.chunk.css",
-    "static/js/2.39f62104.chunk.js",
-    "static/css/main.c20308f1.chunk.css",
-    "static/js/main.83a150c0.chunk.js"
+    "static/css/2.baf3e3ff.chunk.css",
+    "static/js/2.64876a6d.chunk.js",
+    "static/css/main.230c68c6.chunk.css",
+    "static/js/main.771bb356.chunk.js"
   ]
 }
