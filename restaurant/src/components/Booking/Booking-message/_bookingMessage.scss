@@ -1,4 +1,4 @@
-.booking__message {
+.booking-message {
   width: 90%;
   height: auto;
 
@@ -17,6 +17,8 @@
   display: flex;
   justify-content: center;
 
+  z-index: 200;
+
   @media (min-width: 480px) {
     width: 80%;
   }
@@ -25,7 +27,7 @@
     width: 50%;
   }
 
-  .message__wrapper {
+  .booking-message__wrapper {
     width: 95%;
     display: flex;
     flex-direction: column;
@@ -35,7 +37,7 @@
       width: 90%;
     }
 
-    .message__heading {
+    .booking-message__heading {
       width: 90%;
 
       margin-bottom: 1.2rem;
@@ -43,7 +45,7 @@
       text-align: center;
     }
 
-    .message__exit-btn {
+    .booking-message__exit-btn {
       border: 1px solid lightgray;
       background-color: whitesmoke;
       border-radius: 1rem;

@@ -10,8 +10,8 @@ const Navigation = () => {
   return (
     <>
       {isNavOpen &&
-        <ul className="navigation__list">
-          <li className="list-item">
+        <ul className="navigation-list">
+          <li className="navigation-list__item">
             <Link
               activeClass="active"
               to="about"
@@ -24,7 +24,7 @@ const Navigation = () => {
               About
             </Link>
           </li>
-          <li className="list-item">
+          <li className="navigation-list__item">
             <Link
               activeClass="active"
               to="menu"
@@ -37,13 +37,13 @@ const Navigation = () => {
               Menu
             </Link>
           </li>
-          <li className="list-item">
+          <li className="navigation-list__item">
             <NavLink
               to="/booking"
               onClick={toggleNavOpen}
             >Bookings</NavLink>
           </li>
-          <li className="list-item">
+          <li className="navigation-list__item">
             <Link
               activeClass="active"
               to="contact"

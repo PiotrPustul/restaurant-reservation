@@ -5,23 +5,15 @@ import { NavLink as Link } from "react-router-dom";
 import { NavContext } from '../../context/NavContext';
 
 const Header = () => {
-  const {
-    isNavOpen,
-    toggleNavOpen,
-    screenWidth,
-  } = useContext(NavContext);
-
-  const showNavigation = () => {
-    return isNavOpen ?
-      <span className="fas fa-times" onClick={toggleNavOpen} />
-      :
-      <span className="fas fa-bars" onClick={toggleNavOpen} />
-  }
+  const { isNavOpen, toggleNavOpen, screenWidth, } = useContext(NavContext);
 
   return (
     <div className="header ">
       <div className="header__hamburger">
-        {showNavigation()}
+        <span
+          className={isNavOpen ? "fas fa-times" : "fas fa-bars"}
+          onClick={toggleNavOpen}
+        />
       </div>
       <div className="header__logo">
         <h6>The</h6>

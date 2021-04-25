@@ -1,0 +1,101 @@
+.form-details-container {
+   .form-details {
+      width: 100%;
+
+      border-bottom: 0.5px solid rgb(213, 213, 213);
+      padding: 2.4rem;
+      position: relative;
+
+      display: flex;
+      justify-content: space-between;
+
+      @media(min-width: 992px) {
+         padding: 2.4rem 1.6rem 1.6rem;
+      }
+
+      .form-details__label {
+         width: 25%;
+
+         font-size: 1.6rem;
+         text-align: start;
+
+         @media (min-width: 1280px) {
+            width: 20%;
+         }
+      }
+
+      .form-details__info {
+         width: 50%;
+         text-align: start;
+         font-weight: bold;
+
+         @media (min-width: 1280px) {
+            width: 55%;
+         }
+      }
+
+      .form-details__option {
+         width: 25%;
+
+         border: none;
+
+         display: flex;
+         justify-content: flex-end;
+
+         .fa-arrow-down,
+         .fa-arrow-up,
+         .fa-plus-circle,
+         .fa-minus-circle {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+            background-color: white;
+
+            color: rgb(99, 136, 99);
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 2rem;
+            margin-left: 2rem;
+
+            &:active {
+               transform: translateY(2px);
+            }
+         }
+
+         .fa-arrow-down,
+         .fa-arrow-up {
+            box-shadow: none;
+         }
+
+         .disabled {
+            color: gray;
+         }
+      }
+
+      .form-details__table {
+         height: 18px;
+         width: 8%;
+         border-bottom: 2px solid transparent;
+
+         font-weight: bold;
+         justify-self: flex-start;
+         text-align: left;
+
+         @media (min-width: 1280px) {
+            width: 80%;
+         }
+      }
+
+      .form-details__table--invalid {
+         width: 8%;
+         border-color: red;
+      }
+   }
+
+   :last-child {
+      border-bottom: none;
+      justify-content: flex-start;
+
+      @media(min-width: 992px) {
+         border-bottom: 0.5px solid rgb(213, 213, 213);
+      }
+   }
+}

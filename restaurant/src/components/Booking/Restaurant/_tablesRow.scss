@@ -18,7 +18,7 @@
       justify-content: space-around;
    }
 
-   .restaurant__table {
+   .restaurant__tables-row__table {
       width: 70px;
       height: 70px;
 
@@ -64,27 +64,25 @@
 }
 
 .table--active {
-   background-color: rgb(66, 146, 66);
-   border: 1px solid black;
+   background-color: rgb(99, 136, 99);
+   border: 2px solid white;
    border-radius: 50%;
    color: white;
 }
 
 .table--inactive {
-   background-color: rgb(211, 211, 211);
-   border: 1px solid black;
+   background-color: rgb(215, 215, 215);
+   border: 2px solid black;
    border-radius: 50%;
    pointer-events: none;
 }
 
 .table--booked {
-   background-color: darkgray;
-   background-image: url("../../../../static/images/lock2.png");
+   background-color: rgb(169, 169, 169);
+   background-image: url("../../../static/images/lock2.png");
    background-repeat: no-repeat;
    background-position: center;
    background-size: 70%;
-   border: 1px solid black;
-   border-radius: 50%;
    color: transparent;
    pointer-events: none;
 }

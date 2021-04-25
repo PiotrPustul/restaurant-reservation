@@ -1,19 +1,23 @@
 @import "reset";
+@import "variables";
 
 @import "../components/Slides/slides";
 @import "../components/Navigation/navigation";
 
-@import "../components/Booking/Booking-form/bookingForm";
-@import "../components/Booking/Booking-form/Form-elements/Form-details/formDetails";
-@import "../components/Booking/Booking-form/Form-elements/Form-inputs/Input-form/formInput";
+@import "../components/Booking/Form/bookingForm";
+@import "../components/Booking/Form/Details/formDetails";
+@import "../components/Booking/Form/Inputs/input";
 
 @import "../components/Booking/Restaurant/restaurant";
-@import "../components/Booking/Restaurant/Tables-row/tablesRow";
+@import "../components/Booking/Restaurant/tablesRow";
+
 @import "../components/Booking/Booking-message/bookingMessage";
-@import "../components/Booking/Booking-message/Message-detail/messageDetail";
+@import "../components/Booking/Booking-message/messageDetail";
 
 @import "../pages/Header/header";
 @import "../pages/About/about";
 @import "../pages/Menu/menu";
 @import "../pages/Booking/booking";
 @import "../pages/Footer/footer";
+
+@import "../components/Backdrop/backdrop";

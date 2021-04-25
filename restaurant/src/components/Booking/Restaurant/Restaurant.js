@@ -1,6 +1,6 @@
 import React from 'react';
 
-import TablesRow from './Tables-row/TablesRow';
+import TablesRow from './TablesRow';
 
 const Restaurant = () => {
   const firstRow = [1, 2, 3, 4];

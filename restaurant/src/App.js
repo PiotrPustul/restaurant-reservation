@@ -22,10 +22,10 @@ const App = () => {
       <Router>
         <NavProvider >
           <BookingProvider>
-            <Header />
             <Navigation />
             <Switch>
               <Route path='/' exact>
+                <Header />
                 <Slides />
                 <About />
                 <Menu />
@@ -38,6 +38,6 @@ const App = () => {
       </Router>
     </div>
   );
-}
+};
 
 export default App;

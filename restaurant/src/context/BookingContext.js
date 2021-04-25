@@ -1,198 +1,39 @@
-import React, { createContext, useEffect, useState } from 'react';
+import React, { createContext, useState, useReducer } from 'react';
+
+import combineReducers from 'react-combine-reducers';
+import inputReducer, { inputsState } from '../Reducers/InputReducer';
+import detailsReducer, { detailsState } from '../Reducers/DetailsReducer';
 
 export const BookingContext = createContext();
 
 const BookingProvider = ({ children }) => {
-  const [inputsValue, setInputsValue] = useState({
-    name: "",
-    email: "",
-    phone: "",
+  const [rootReducer, initialState] = combineReducers({
+    details: [detailsReducer, detailsState],
+    inputs: [inputReducer, inputsState]
   });
+
+  const [state, dispatch] = useReducer(rootReducer, initialState);
   const [value, onChange] = useState(new Date());
-  const [showCalendar, setShowCalendar] = useState(false);
-  const [timenHours, setTimeHours] = useState(12);
-  const [timeMinutes, setTimeMinutes] = useState(0);
-  const [coversAmount, setCoverAmount] = useState(1);
-  const [durationHours, setDurationHours] = useState(1);
-  const [durationMinutes, setDurationMinutes] = useState(0);
-  const [tableNr, setTableNr] = useState('');
-  const [confirmBooking, setConfirmBooking] = useState(false);
 
-  const handleInput = (e) => {
-    const { name, value } = e.target;
-
-    setInputsValue({
-      ...inputsValue,
-      [name]: value,
-    });
-  };
-
-  const handleCalendarVisibility = () => setShowCalendar(prevValue => !prevValue);
-
-  const increaseTime = () => {
-    setTimeMinutes(prevValue => prevValue + 15)
-
-    if (timeMinutes >= 45) {
-      setTimeMinutes(0);
-      setTimeHours(prevValue => prevValue + 1)
-    }
-  };
-  const decreaseTime = () => {
-    setTimeMinutes(prevValue => prevValue - 15)
-
-    if (timeMinutes <= 0) {
-      setTimeMinutes(45);
-      setTimeHours(prevValue => prevValue - 1)
-    }
-  };
-
-  const increaseCovers = () => setCoverAmount(prevValue => prevValue + 1);
-  const decreaseCovers = () => setCoverAmount(prevValue => prevValue - 1);
-
-  const increaseDuration = () => {
-    setDurationMinutes(prevValue => prevValue + 15)
-
-    if (durationMinutes >= 45) {
-      setDurationMinutes(0);
-      setDurationHours(prevValue => prevValue + 1)
-    }
-  };
-  const decreaseDuration = () => {
-    setDurationMinutes(prevValue => prevValue - 15)
-
-    if (durationMinutes <= 0) {
-      setDurationMinutes(45);
-      setDurationHours(prevValue => prevValue - 1)
-    }
-  };
-
-  const selectTable = (e) => {
-    const tables = [...document.getElementsByClassName('table')];
-    tables.forEach(table => {
-      const id = e.target.id;
-
-      if (id === table.id) {
-        table.classList.toggle("table--active");
-        setTableNr(prevValue => prevValue === id ? '' : id);
-      }
-
-      if (id !== table.id) {
-        table.classList.toggle("table--inactive");
-      }
-    });
-  };
-
-  useEffect(() => {
-    const name = inputsValue.name;
-    const email = inputsValue.email;
-    const phone = inputsValue.phone;
-    const activeTables = document.querySelectorAll('.table--active');
-    const submitBtn = document.querySelector(".submit-btn");
-
-    if (submitBtn !== null) {
-      if (name !== '' && email !== '' && phone !== '' && activeTables.length > 0) {
-        submitBtn.classList.toggle("submit-btn--active");
-      } else {
-        submitBtn.classList.remove("submit-btn--active");
-      }
-    }
-  });
-
-  const bookTable = () => {
-    const name = inputsValue.name;
-    const email = inputsValue.email;
-    const phone = inputsValue.phone;
-    const bookingForm = document.querySelector('.booking__form');
-    const restaurant = document.querySelector('.restaurant');
-    const bookingCancelBtn = document.querySelector('.booking__cancel-btn');
-
-    if (name !== '' && email !== '' && phone !== '' && tableNr !== '') {
-      setConfirmBooking(true);
-      bookingForm.classList.add('block');
-      restaurant.classList.add('block');
-      bookingCancelBtn.classList.add('block');
-    }
-  };
-
-  const resetStateValues = () => {
-    setInputsValue({
-      name: '',
-      email: '',
-      phone: '',
-    })
-    setTimeHours(prevValue => 12);
-    setTimeMinutes(prevValue => 0);
-    onChange(new Date());
-    setCoverAmount(prevValue => 1);
-    setDurationHours(prevValue => 1);
-    setDurationMinutes(prevValue => 0);
-    setTableNr(prevValue => '');
-    setConfirmBooking(false);
-  };
-
-  const removeTablesClass = () => {
+  const addBookedTable = () => {
     const tableActive = [...document.getElementsByClassName('table--active')];
     const tableInactive = [...document.getElementsByClassName('table--inactive')];
 
     tableActive.forEach(table => {
       table.classList.remove('table--active');
       table.classList.add('table--booked');
-    })
+    });
 
     tableInactive.forEach(table => {
       table.classList.remove('table--inactive');
-    })
-  };
-
-  const closeBookingMessage = () => {
-    const bookingForm = document.querySelector('.booking__form');
-    const restaurant = document.querySelector('.restaurant');
-    const bookingCancelBtn = document.querySelector('.booking__cancel-btn');
-
-    bookingForm.classList.remove('block');
-    restaurant.classList.remove('block');
-    bookingCancelBtn.classList.remove('block');
-
-    resetStateValues()
-    removeTablesClass()
+    });
   };
 
   return (
-    <BookingContext.Provider
-      value={{
-        inputsValue,
-        handleInput,
-
-        value,
-        onChange,
-        showCalendar,
-        handleCalendarVisibility,
-
-        timenHours,
-        timeMinutes,
-        increaseTime,
-        decreaseTime,
-
-        coversAmount,
-        increaseCovers,
-        decreaseCovers,
-
-        durationHours,
-        durationMinutes,
-        increaseDuration,
-        decreaseDuration,
-
-        tableNr,
-        selectTable,
-
-        confirmBooking,
-        bookTable,
-        closeBookingMessage,
-        resetStateValues,
-      }}>
+    <BookingContext.Provider value={{ state, dispatch, value, onChange, addBookedTable }}>
       {children}
     </BookingContext.Provider>
-  )
+  );
 };
 
 export default BookingProvider;

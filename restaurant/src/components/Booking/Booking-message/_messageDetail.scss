@@ -1,4 +1,4 @@
-.message-detail {
+.booking-message__detail {
    width: 90%;
    padding: 1.2rem 0;
    border-bottom: 1px solid lightgray;
@@ -6,11 +6,11 @@
    display: flex;
    align-items: center;
 
-   .message-detail__info {
+   .booking-message__detail__info {
       width: 30%;
    }
 
-   .message-detail__data {
+   .booking-message__detail__data {
       width: auto;
       color: gold;
       font-weight: bold;
