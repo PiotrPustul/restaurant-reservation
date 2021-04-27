@@ -1,0 +1,71 @@
+{
+   "starters": [{
+      "title": "Buffalo mozzarella, roasted figs, truffle",
+      "price": "£8"
+   }, {
+      "title": "Salt baked beetroot, roast artichoke, orange & chicory salad",
+      "price": "£7"
+   }, {
+      "title": "Pea & Devonshire crab cake, watercress & pickled fennel salad",
+      "price": "£9"
+   }, {
+      "title": "Turkey & apricot Scotch Egg",
+      "price": "£5.5"
+   }, {
+      "title": "Butlers secret cheddar & Guinness rarebit",
+      "price": "£7.5"
+   }, {
+      "title": "Angus beef blade croquettes, horseradish cream",
+      "price": "£7.5"
+   }],
+
+   "shares": [{
+      "title": "Baked Camembert (v) garlic & rosemary, onion jam, truffle honey, foccacia",
+      "price": "£16"
+   }, {
+      "title": "British Charcuterie. Coppa, air-dried Cumbrian ham, Suffolk salami & chorizo, goat's cheese, sun dried tomatoes, gherkins, bread",
+      "price": "£20"
+   }],
+   "mains": [{
+         "title": "Pan roasted sea bass, crushed new potatoes & bacon, samphire, buttered leeks",
+         "price": "£17.50"
+      },
+      {
+         "title": "28 day aged 8 oz rib-eye steak, roasted tomato, watercress, fries, peppercorn sauce",
+         "price": "£26"
+      },
+      {
+         "title": "The Lockdown burger, cheese, ale onions, shredded lettuce, ketchup, mayo, pickles, fries",
+         "price": "£15.75"
+      },
+      {
+         "title": "Beer battered cod, triple cooked chips, mushy peas, tartare sauce",
+         "price": "£15.50"
+      },
+      {
+         "title": "Pan fried gnocchi, spiced tomato sauce, spinach, rocket pesto, crispy shallots (vg)",
+         "price": "£12.50"
+      },
+      {
+         "title": "Cumberland sausages, crushed winter roots, savoy cabbage, crispy shallots, gravy",
+         "price": "£14.50"
+      }
+   ],
+   "puddings": [{
+         "title": "Spiced fruit Bakewell tart, clotted cream",
+         "price": "£7"
+      },
+      {
+         "title": "Sticky toffee pudding, clotted cream, caramel sauce",
+         "price": "£6"
+      },
+      {
+         "title": "Flourless chocolate & orange brownie, vegan vavilla ice-cream",
+         "price": "£6.5"
+      },
+      {
+         "title": "3 Scoops lemon, mango or raspberry sorbet (vg)",
+         "price": "£4.5"
+      }
+   ]
+}
