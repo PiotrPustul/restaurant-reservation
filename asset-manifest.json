@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/restaurant-reservation/static/css/main.331343ef.chunk.css",
-    "main.js": "/restaurant-reservation/static/js/main.d2012245.chunk.js",
-    "main.js.map": "/restaurant-reservation/static/js/main.d2012245.chunk.js.map",
+    "main.css": "/restaurant-reservation/static/css/main.6554a04a.chunk.css",
+    "main.js": "/restaurant-reservation/static/js/main.3c590232.chunk.js",
+    "main.js.map": "/restaurant-reservation/static/js/main.3c590232.chunk.js.map",
     "runtime-main.js": "/restaurant-reservation/static/js/runtime-main.bce4934e.js",
     "runtime-main.js.map": "/restaurant-reservation/static/js/runtime-main.bce4934e.js.map",
     "static/css/2.baf3e3ff.chunk.css": "/restaurant-reservation/static/css/2.baf3e3ff.chunk.css",
-    "static/js/2.b8364b74.chunk.js": "/restaurant-reservation/static/js/2.b8364b74.chunk.js",
-    "static/js/2.b8364b74.chunk.js.map": "/restaurant-reservation/static/js/2.b8364b74.chunk.js.map",
+    "static/js/2.25ccd4e7.chunk.js": "/restaurant-reservation/static/js/2.25ccd4e7.chunk.js",
+    "static/js/2.25ccd4e7.chunk.js.map": "/restaurant-reservation/static/js/2.25ccd4e7.chunk.js.map",
     "index.html": "/restaurant-reservation/index.html",
     "static/css/2.baf3e3ff.chunk.css.map": "/restaurant-reservation/static/css/2.baf3e3ff.chunk.css.map",
-    "static/css/main.331343ef.chunk.css.map": "/restaurant-reservation/static/css/main.331343ef.chunk.css.map",
-    "static/js/2.b8364b74.chunk.js.LICENSE.txt": "/restaurant-reservation/static/js/2.b8364b74.chunk.js.LICENSE.txt",
+    "static/css/main.6554a04a.chunk.css.map": "/restaurant-reservation/static/css/main.6554a04a.chunk.css.map",
+    "static/js/2.25ccd4e7.chunk.js.LICENSE.txt": "/restaurant-reservation/static/js/2.25ccd4e7.chunk.js.LICENSE.txt",
     "static/media/style.scss": "/restaurant-reservation/static/media/picture3.890951f6.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.bce4934e.js",
     "static/css/2.baf3e3ff.chunk.css",
-    "static/js/2.b8364b74.chunk.js",
-    "static/css/main.331343ef.chunk.css",
-    "static/js/main.d2012245.chunk.js"
+    "static/js/2.25ccd4e7.chunk.js",
+    "static/css/main.6554a04a.chunk.css",
+    "static/js/main.3c590232.chunk.js"
   ]
 }
