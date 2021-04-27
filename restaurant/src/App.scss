@@ -13,4 +13,10 @@
       transform: translateX(0px);
     }
   }
+
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
 }

@@ -70,8 +70,10 @@
 
     .form__submit__button {
       background-color: white;
-      color: green;
-      border: 2px solid green;
+      color: rgb(99, 136, 99);
+      ;
+      border: 2px solid rgb(99, 136, 99);
+      ;
       border-radius: 10px;
       cursor: pointer;
       padding: 1rem 2rem;
@@ -84,7 +86,8 @@
       align-items: center;
 
       &:hover {
-        background-color: green;
+        background-color: rgb(99, 136, 99);
+        ;
         color: white;
         transition: 1s;
       }
