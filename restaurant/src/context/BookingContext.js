@@ -1,19 +1,20 @@
-import React, { createContext, useState, useReducer } from 'react';
+import React, { createContext, useEffect, useReducer, useState } from 'react';
 
-import combineReducers from 'react-combine-reducers';
-import inputReducer, { inputsState } from '../Reducers/InputReducer';
-import detailsReducer, { detailsState } from '../Reducers/DetailsReducer';
+import { rootReducer, initialState } from '../Reducers/rootReducer';
+
 
 export const BookingContext = createContext();
 
 const BookingProvider = ({ children }) => {
-  const [rootReducer, initialState] = combineReducers({
-    details: [detailsReducer, detailsState],
-    inputs: [inputReducer, inputsState]
-  });
-
   const [state, dispatch] = useReducer(rootReducer, initialState);
+  const [menu, setMenu] = useState({
+    starters: [],
+    shares: [],
+    mains: [],
+    puddings: [],
+  });
   const [value, onChange] = useState(new Date());
+
 
   const addBookedTable = () => {
     const tableActive = [...document.getElementsByClassName('table--active')];
@@ -29,8 +30,30 @@ const BookingProvider = ({ children }) => {
     });
   };
 
+  const getData = () => {
+    fetch('db.json', {
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+    })
+      .then(response => response.json())
+      .then(data => {
+        setMenu({
+          starters: data.starters,
+          shares: data.shares,
+          mains: data.mains,
+          puddings: data.puddings,
+        });
+      });
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
-    <BookingContext.Provider value={{ state, dispatch, value, onChange, addBookedTable }}>
+    <BookingContext.Provider value={{ state, dispatch, value, onChange, addBookedTable, menu }}>
       {children}
     </BookingContext.Provider>
   );

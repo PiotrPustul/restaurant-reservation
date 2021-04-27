@@ -1,48 +1,29 @@
 import React, { useContext } from 'react';
 
-import { NavLink as Link } from "react-router-dom";
-
-import { NavContext } from '../../context/NavContext';
+import { BookingContext } from '../../context/BookingContext';
+import Navigation from '../../components/Navigation/Navigation';
+import { HANDLE_NAV } from '../../Reducers/actionTypes';
 
 const Header = () => {
-  const { isNavOpen, toggleNavOpen, screenWidth, } = useContext(NavContext);
+  const { state, dispatch } = useContext(BookingContext);
+  const { isNavOpen } = state.nav;
+
+  const toggleNavOpen = () => {
+    dispatch({ type: HANDLE_NAV });
+  };
 
   return (
     <div className="header ">
-      <div className="header__hamburger">
-        <span
-          className={isNavOpen ? "fas fa-times" : "fas fa-bars"}
-          onClick={toggleNavOpen}
-        />
+      <div className="top-bar">
+        <span className={isNavOpen ? "fas fa-times" : "fas fa-bars"} onClick={toggleNavOpen} />
+        <div className="header__logo">
+          <h6>The</h6>
+          <h1>Lockdown</h1>
+        </div>
       </div>
-      <div className="header__logo">
-        <h6>The</h6>
-        <h1>Lockdown</h1>
-      </div>
-      {screenWidth > 767 &&
-        <div className="header__socials">
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noreferrer">
-            <span className="fab fa-instagram" />
-          </a>
-          <a
-            href="https://twitter.com/"
-            target="_blank"
-            rel="noreferrer">
-            <span className="fab fa-twitter" />
-          </a>
-        </div>}
-      <div className="header__book-btn">
-        <Link to="/booking">
-          <span className="fas fa-book-open"></span>
-          <span className="book-text">Bookings</span>
-        </Link>
-      </div>
+      {isNavOpen && <Navigation />}
     </div>
-  )
-}
+  );
+};
 
 export default Header;
-

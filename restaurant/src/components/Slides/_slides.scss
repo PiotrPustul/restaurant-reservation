@@ -1,16 +1,31 @@
 .slides {
   width: 100%;
-  padding-top: 9rem;
-
-  @media (min-width: 768px) {
-    padding-top: 0;
-  }
+  height: calc(100vh - 69px);
 
   .slides__slide {
-    height: 100%;
+    height: calc(100vh - 69px);
 
-    @media (min-width: 1280px) {
-      height: 100vh;
+    .slide-img {
+      height: 100%;
+      background-position: center;
+      background-size: cover;
     }
+
+    .slide-img--first-slide {
+      background-image: url("../../static/images/picture1.jpg");
+    }
+
+    .slide-img--second-slide {
+      background-image: url("../../static/images/picture2.jpg");
+    }
+
+    .slide-img--forth-slide {
+      background-image: url("../../static/images/picture3.jpg");
+    }
+  }
+
+  .thumbs-wrapper,
+  .carousel-status {
+    display: none;
   }
 }

@@ -99,3 +99,41 @@
       }
    }
 }
+
+.form-calendar {
+   padding: 5rem 0;
+   position: absolute;
+
+   @media(min-width: 480px) {
+      padding: 5rem 3rem;
+   }
+
+   .form-calendar__close {
+      background-color: white;
+      border-radius: 1rem;
+      color: black;
+      cursor: pointer;
+
+      padding: 0.5rem 1rem;
+      transition: 1s;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      &:hover {
+         background-color: rgb(210, 223, 232);
+         color: black;
+      }
+   }
+
+   .react-calendar {
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.26);
+      padding: 1rem;
+
+      .react-calendar__navigation button[disabled] {
+         background-color: transparent;
+      }
+   }
+}

@@ -1,65 +1,95 @@
 .footer {
-  width: 100%;
 
-  background-color: rgb(56, 104, 127);
+  background-color: black;
   color: white;
+  padding: 8.5rem;
 
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-  @media (min-width: 1280px) {
-    height: 16rem;
-
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  @mixin footer {
-    width: 100%;
-
-    padding: 2.4rem 1.2rem;
+  .footer__wrapper {
+    width: 90%;
 
     display: flex;
-    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
 
-    @media (min-width: 1280px) {
-      width: 30%;
-      height: 100%;
+    .footer__contact {
+      width: 25%;
 
-      justify-content: center;
-    }
-  }
-
-  .footer__opening-hours {
-    @include footer;
-
-    div {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
 
-      &:nth-child(1) {
-        font-weight: 900;
+      h3 {
+        font-weight: bold;
+        font-size: 2rem;
+        margin-bottom: 1rem;
       }
 
       span {
         font-size: 1.8rem;
-        padding-bottom: 1.2rem;
+        margin-bottom: 0.7rem;
+
+        a {
+          text-decoration: none;
+          color: rgb(157, 157, 157);
+
+          &:hover {
+            color: white;
+            transition: 1s;
+          }
+        }
       }
     }
-  }
 
-  .footer__contact-details {
-    @include footer;
+    .footer__block {
+      width: 50%;
 
-    div {
-      span {
-        font-size: 1.8rem;
-        padding-bottom: 1.2rem;
+      .footer__block__logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        span {
+          font-size: 2rem;
+          font-weight: 900;
+        }
+
+        h2 {
+          font-size: 4.2rem;
+          font-weight: 900;
+        }
       }
-      .fa-map-marker-alt,
-      .fa-phone-alt,
-      .fa-envelope {
-        margin-right: 1rem;
+
+      .footer__block__socials {
+        font-size: 2.5rem;
+        padding: 2.4rem 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+          margin: 0 1rem;
+        }
+
+        .footer__block__socials--instagram {
+          &:hover {
+            color: rgb(128, 0, 128);
+            transition: 1s;
+          }
+        }
+
+        .footer__block__socials--twitter {
+          &:hover {
+            color: rgb(93, 169, 220);
+            transition: 1s;
+          }
+        }
       }
     }
   }

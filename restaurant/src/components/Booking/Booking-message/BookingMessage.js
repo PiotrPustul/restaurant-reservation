@@ -28,7 +28,6 @@ const BookingMessage = () => {
           <h1 className="booking-message__heading">
             We are pleased to inform you that your reservation was successful.
           </h1>
-          <MessageDetail title={'Booking number'} detail={`#${ReservationNumber}`} />
           <MessageDetail title={'Name'} detail={enteredName} />
           <MessageDetail title={'Email'} detail={enteredEmail} />
           <MessageDetail title={'Phone'} detail={enteredPhone} />
@@ -37,6 +36,7 @@ const BookingMessage = () => {
           <MessageDetail title={'Covers'} detail={covers} />
           <MessageDetail title={'Duration'} detail={`${durationHours}h : ${durationMinutes < 10 ? `${durationMinutes}0` : `${durationMinutes}`}min`} />
           <MessageDetail title={'Table'} detail={`#${tableNr}`} />
+          <MessageDetail title={'Booking number'} detail={`#${ReservationNumber}`} />
           <button className="booking-message__exit-btn" onClick={closeBookingMessage}>
             Close
           </button>
