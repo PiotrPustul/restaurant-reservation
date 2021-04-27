@@ -8,10 +8,10 @@ const Footer = () => {
       <div className="footer__wrapper">
         <div className="footer__contact">
           <h3>Contact</h3>
-          <span>007-555-2021</span>
-          <span>123 Fake Street</span>
-          <span>London, SW01 1SR</span>
-          <span>booking@thelockdown.co.uk</span>
+          <p>007-555-2021</p>
+          <p>123 Fake Street</p>
+          <p>London, SW01 1SR</p>
+          <p>booking@thelockdown.co.uk</p>
         </div>
         <div className="footer__block">
           <div className="footer__block__logo">
@@ -37,14 +37,14 @@ const Footer = () => {
         </div>
         <div className="footer__contact">
           <h3>Hours</h3>
-          <span>Mon-Thu 12-22</span>
-          <span>Fri-Sat 12-23</span>
-          <span>Sun 12-22</span>
-          <span>
+          <p>Mon-Thu 12-22</p>
+          <p>Fri-Sat 12-23</p>
+          <p>Sun 12-22</p>
+          <p>
             <Link to="/booking" >
               Make a Reservation
             </Link>
-          </span>
+          </p>
         </div>
       </div >
     </div>
